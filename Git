@@ -1,0 +1,77 @@
+$ git init
+Instala o git ali com as configurações e td mais.
+
+$ git status
+Faz a relação de arquivos e alterações em relação a master ou a branch no ar.
+
+$ git add filename filename1
+adiciona um arquivo a area de transição do git
+
+$ git diff filename
+Mostra a dirença entre o arquivo na branch e o arquivo local
+
+$ git commit
+Sobe o arquivo para o seu fork
+-m "string"
+coloca descrição ao seu commit
+
+BACKING TRACKING
+$ git log
+Mostra o historico de commits com nome e a descrição
+
+Head é o ultimo commit
+git show HEAD
+mostra o ultimo commit
+
+$git checkout HEAD filename
+Tira um arquivo do pwd
+
+$ git reset HEAD filename
+reseta o head do do arquivo caso ele ja estejaa na area de treanferencia.
+
+$ git reset SHA
+7primeiros digitos do SHA ou ele todos de onde você deseja que o HEAD vá
+ou seja, ele volta seu projeto no ~"tempo"~
+
+BRANCHING
+$ git branch
+lista a branchs
+diz qual branch você está no *.
+
+$ git branch branchname
+cria uma nova branch. em branchname o nome da nova branch
+
+$ git checkout branchname
+Muda a working branch
+
+$git merge branchname
+faz o merge entre as branch colocando a brachname na branch que você está
+(ou seja mude pra master ai se faz o merge)
+
+importante, se o merge der conflito o mesmo será gravado no codigo em questão com as linha conflitantes(dos dois arquivos no seu arquivo)
+e você deve remover todas as marcações e resolver o conflito, feito isso deve ser realizado um novo commit com as alterações
+e um novo merge.
+
+$git branch -d name
+-d deleta a branch.
+
+$ git branch -a
+Lista as branchs e seus locais(local ou patch(for remotes))
+
+REMOTES
+$ git clone origin local
+origin: de onde voc quer clonar (diretorio ou link)
+local: nome do local onde o git vai colocar a copia
+
+$ git remotes -v
+lista os remotes que tem no seu .git sendo a origin onde você clonou a primeira vez.
+
+$ git merge origin/master
+origin de onde voc clonou e pra pegar de la e fazer o merge com o seu
+dp
+$ git fetch
+Tras os arquivos que foram editados no seu origin/master para sua copia
+
+$ git push ondevai ondevem
+você coloca seus arquivos no seu remote mas para outra remote(ondevai) ver
+ou seja, assim como o fetch.

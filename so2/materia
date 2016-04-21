@@ -1,0 +1,5 @@
+faz o backup
+sudo find . -print | cpio -ocv >/home/caiquemitsuoka/fatec/bkp.cpio
+
+lita os asquivos backpeados
+cpio -ict <bkp.cpio | more
