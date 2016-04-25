@@ -1,1 +1,6 @@
 learnyounode/node_modules/*
+!*.c
+!*.js
+!*.py
+!*.sh
+*.txt

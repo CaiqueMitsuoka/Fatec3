@@ -1,0 +1,49 @@
+Oque é git?
+Pra que serve?
+Onde usam git?
+Vantagens do git?
+Como funciona o desenvolvimento distribuido
+Oque é HEAD, Master e Origin.n
+Criar pasta seu nome
+//git init
+Criar txt com seu nome
+Nome Completo
+Algo que você gosta
+git status
+git add nome.txt
+<area transição>
+git commit -m "msg"
+git log
+BRANCHS YEY
+git branch o-melhor
+git branch
+git branch checkout o-melhor
+Editar o TXT
+apague a linha e substitua por outra
+git status
+git add
+git commit
+GO MERGE
+git checkout master
+git merge o-melhor
+resolver conflitos
+git branch -d o-melhor
+OK, geral agora de branchs os conceitos de working folder, area de transição e a sua branch.
+GO REMOTES
+versionamento distribuido e conceitos dos remotes
+cria outra pasta (não dentro do git la caraio)
+git clone https://github.com/CaiqueMitsuoka/ads151.git ADS15-1
+criar outra coisa ou copia e cola de la mesmo sla
+status
+add
+commit
+oque é o push? lembra atualizar o zip sobre você em outro lugar
+oque é o fetch? atualizar o seus zips
+oque é o clone? trazer o de algum lugar substituindo o seu
+e o pull? faz um fetch e um merge para a branch que voce esta,
+ou seja atualiza a sua branch com a HEAD do local que vc deu um pull
+git remote -v
+git fetch x pull(especifico) x clone
+git push origin master
+git fetch
+git merge origin/master
