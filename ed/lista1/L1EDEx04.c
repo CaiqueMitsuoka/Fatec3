@@ -1,3 +1,6 @@
+//Caique Hitoshi Mitsuoka 0030481511006
+//Felipe Richter Lapolla Inocencio 0030481511013
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -10,7 +13,7 @@ typedef struct list{
     struct reg *inicio;
     struct reg *fim;
 }TLISTA;
-void PrintList(TLISTA *lista,char *head){
+void PrintLista(TLISTA *lista,char *head){
     TREG *aux = lista->inicio;
     printf("%s", head);
     if(aux != NULL){
@@ -110,15 +113,7 @@ TLISTA* Diff(TLISTA *lista1, TLISTA *lista2){
     }
     return lista3;
 }
-void Liberar(TLISTA *EXLISTA){
-    TREG *aux = EXLISTA->inicio, *temp;
-    while(aux != NULL){
-        temp = aux->prox;
-        free(aux);
-        aux = temp;
-    }
-    free(EXLISTA);
-}
+
 int main(){
     TLISTA lista[2],*uniao,*intersec,*diff1,*diff2;
     int a;
@@ -138,21 +133,16 @@ int main(){
     }
 
     /* Prints e chamadas das operações */
-    PrintList(&lista[0], (char*)"Conjunto 1:\n");
-    PrintList(&lista[1], (char*)"Conjunto 2:\n");
+    PrintLista(&lista[0], (char*)"Conjunto 1:\n");
+    PrintLista(&lista[1], (char*)"Conjunto 2:\n");
     uniao = Uniao(&lista[0],&lista[1]);
-    PrintList(uniao, (char*)"Uniao dos conjuntos:\n");
+    PrintLista(uniao, (char*)"Uniao dos conjuntos:\n");
     intersec = Intersec(&lista[0],&lista[1]);
-    PrintList(intersec, (char*)"Interseccao dos conjuntos:\n");
+    PrintLista(intersec, (char*)"Interseccao dos conjuntos:\n");
     diff1 = Diff(intersec,&lista[0]);
-    PrintList(diff1, (char*)"Diferenca Conjunto 1 - Conjunto 2 :\n");
+    PrintLista(diff1, (char*)"Diferenca Conjunto 1 - Conjunto 2 :\n");
     diff2 = Diff(intersec, &lista[1]);
-    PrintList(diff2, (char*)"Diferenca Conjunto 2 - Conjunto 1 :\n");
-
-    Liberar(uniao);
-    Liberar(intersec);
-    Liberar(diff1);
-    Liberar(diff2);
+    PrintLista(diff2, (char*)"Diferenca Conjunto 2 - Conjunto 1 :\n");
 
     return 0;
 }

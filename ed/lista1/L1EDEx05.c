@@ -1,3 +1,6 @@
+//Caique Hitoshi Mitsuoka 0030481511006
+//Felipe Richter Lapolla Inocencio 0030481511013
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -7,10 +10,12 @@ typedef struct reg{
     struct reg *prox;
     int num;
 }TREG;
+
 typedef struct list{
     struct reg *inicio;
     struct reg *fim;
 }TLISTA;
+
 void AddItem(TLISTA *lista , int novo){
     TREG *aux = (TREG*)malloc(sizeof(TREG));
     aux->num = novo;
@@ -22,7 +27,8 @@ void AddItem(TLISTA *lista , int novo){
     }
     lista->fim = aux;
 }
-void PrintL(TLISTA *lista){
+
+void PrintLista(TLISTA *lista){
     TREG *aux = lista->inicio;
     if(aux != NULL){
         printf("%d", aux->num);
@@ -34,6 +40,7 @@ void PrintL(TLISTA *lista){
     }
     printf("\n");
 }
+
 void DeleteItem(TLISTA *lista,int item){
     TREG *aux = lista->inicio, *bef = NULL;
     while(aux != NULL){
@@ -70,6 +77,6 @@ int main(){
         DeleteItem(Lista, item);
     }
 
-    PrintL(Lista);
+    PrintLista(Lista);
     return 0;
 }

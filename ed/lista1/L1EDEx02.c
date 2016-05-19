@@ -1,3 +1,6 @@
+//Caique Hitoshi Mitsuoka 0030481511006
+//Felipe Richter Lapolla Inocencio 0030481511013
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -25,7 +28,7 @@ void AddItem(TLISTA *lista , float novo){
     lista->fim = aux;
 }
 
-TLISTA* merge(TLISTA *lista1, TLISTA *lista2){
+TLISTA* GerarListaIII(TLISTA *lista1, TLISTA *lista2){
     float v1, v2;
     TREG  *aux1 = lista1->inicio, *aux2 = lista2->inicio;
     TLISTA *lista3 = (TLISTA*)malloc(sizeof(TLISTA));
@@ -79,6 +82,6 @@ int main(){
     }
     PrintList(&lista[0], (char*)"Lista 1:");
     PrintList(&lista[1], (char*)"Lista 2:");
-    PrintList(merge(&lista[0],&lista[1]), (char*)"Lista 3:");
+    PrintList(GerarListaIII(&lista[0],&lista[1]), (char*)"Lista 3:");
     return 0;
 }

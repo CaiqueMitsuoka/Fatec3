@@ -101,7 +101,7 @@ int main(){
             Graf.lig[X]++;
         }
 
-        // imprimir(&Graf);
+        imprimir(&Graf);
 
         printf("De: ");
         scanf("%d", &De);
