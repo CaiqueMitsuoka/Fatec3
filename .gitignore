@@ -1,6 +1,7 @@
+learnyounode/node_modules/*
+OpenSub/node_modules/*
 !*.c
 !*.js
 !*.py
 !*.sh
 *.txt
-
